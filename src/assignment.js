@@ -13,27 +13,54 @@ const assignment = {};
  * @param {Array} arrayOfNumbers the array of numbers to sum
  * @returns number the sum of the numbers
  */
-function sumOfNumbers(arrayOfNumbers) {
-    return arrayOfNumbers.length;
+
+ function sumOfNumbers(arrayOfNumbers) {
+   const sum = arrayOfNumbers.reduce ((acc, cur) => acc + cur, 0)
+    return sum
 }
+
+const num = [2,3,4,5,6,8,9]
+console.log(sumOfNumbers(num))
+
+
+
+    // return arrayOfNumbers.length;
+// }
 // assignment.sumOfNumbers = sumOfNumbers;
 
-/**
- * Challenge - 2
+
+
+/* Challenge - 2
  * 
  * Count all even numbers within an array of numbers.
  * If you did Challenge - 2, remove the comment in the line just after this function
  * 
  * @param {Array} arrayOfNumbers the array containing even or non-even numbers
  * @returns number the count of even numbers
- */
+*/
 function countEvenNumbers(arrayOfNumbers) {
-    return arrayOfNumbers.length;
+    /* let evenNumberCount = 0;
+
+    for (let i = 0; i < arrayOfNumbers.length; i++){
+        let evenNumber = arrayOfNumbers [i] % 2 === 0;
+    }
+    if (evenNumber){
+        evenNumberCount++;
+    }
+
+    
+console.log (evenNumberCount);
+*/
+const evenNumber = arrayOfNumbers.filter (num => num % 2 === 0)
+    return evenNumber.length
 }
+
+console.log(countEvenNumbers(num))
+
 // assignment.countEvenNumbers = countEvenNumbers;
 
-/**
- * Challenge - 3
+
+/* Challenge - 3
  * 
  * Given an array of numbers representing temperatures in Celsius,
  * convert each number to Fahrenheit and return a new array containing the converted
@@ -47,9 +74,15 @@ function countEvenNumbers(arrayOfNumbers) {
  * @returns Array the converted temperatures in Fahrenheit
  */
 function celsiusToFahrenheit(arrayOfNumbers) {
-    return arrayOfNumbers;
+    const celsiusToFahrenheit = arrayOfNumbers.map (temperature => temperature + 273)
+    const temperatureTrunc = celsiusToFahrenheit.map (temperature => Math.trunc(temperature))
+    return temperatureTrunc
 }
+    // return arrayOfNumbers;
 // assignment.celsiusToFahrenheit = celsiusToFahrenheit;
+
+const celciusTemp = [23.05, 34.95, 40.90, 12.04]
+console.log(celsiusToFahrenheit(celciusTemp))
 
 
 // ========================
