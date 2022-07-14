@@ -26,7 +26,7 @@ console.log(sumOfNumbers(num))
 
     // return arrayOfNumbers.length;
 // }
-// assignment.sumOfNumbers = sumOfNumbers;
+assignment.sumOfNumbers = sumOfNumbers;
 
 
 
@@ -57,7 +57,7 @@ const evenNumber = arrayOfNumbers.filter (num => num % 2 === 0)
 
 console.log(countEvenNumbers(num))
 
-// assignment.countEvenNumbers = countEvenNumbers;
+assignment.countEvenNumbers = countEvenNumbers;
 
 
 /* Challenge - 3
@@ -79,7 +79,7 @@ function celsiusToFahrenheit(arrayOfNumbers) {
     return temperatureTrunc
 }
     // return arrayOfNumbers;
-// assignment.celsiusToFahrenheit = celsiusToFahrenheit;
+assignment.celsiusToFahrenheit = celsiusToFahrenheit;
 
 const celciusTemp = [23.05, 34.95, 40.90, 12.04]
 console.log(celsiusToFahrenheit(celciusTemp))
